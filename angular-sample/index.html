@@ -1,16 +1,26 @@
 <!DOCTYPE HTML>
+<!-- set ng-app to app name -->
 <html ng-app="noodleApp">
     <head>
         <title>Playing with Angular</title>
+        <!-- link angular -->
         <script src="angular.min.js"></script>
         <script src="Noodle.js"></script>
     </head>
     <body>
-        <div ng-controller="NoodleController as noodleCtrl">
-            <h1>{{noodleCtrl.flavor}}</h1>
+        <!-- for ng-controller, the "as" part sets up a name -->
+        <!--   that we can call the controller function's "vm" -->
+        <div ng-controller="NoodleController as goTeam37">
+          <span>Enter flavor:</span>
+          <input type="text" ng-model="goTeam37.flavor">
+
+
+            <h1>{{goTeam37.flavor}}</h1>
             <ul>
-                <li ng-repeat="noodle in noodleCtrl.noodles">
-                    {{noodle.name}} with {{noodle.sauce}}
+                <!-- ng-repeat - choose any name for one item -->
+                <!--    as you loop through an array -->
+                <li ng-repeat="meatball in goTeam37.noodles">
+                    {{meatball.name}} with {{meatball.sauce}}
                 </li>
             </ul>
         </div>
