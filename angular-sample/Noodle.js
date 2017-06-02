@@ -1,8 +1,12 @@
 angular
+  // module gives the app a name
   .module('noodleApp',[])
+  // .controller part attaches a function as a controller
   .controller('NoodleController', NoodleController);
 
+  // controller function to use
   function NoodleController() {
+    // save the value of this so we can use different htis in other functions
     var vm = this;
     vm.flavor = "delicious";
     vm.noodles = [
@@ -10,4 +14,9 @@ angular
       {'name': 'macaroni', 'sauce': 'cheese'},
       {'name': 'udon', 'sauce': 'beef broth'}
     ];
+    vm.sayHi = function(){
+      console.log(this);
+      console.log(vm);
+      vm.flavor = 'gross';
+    }
   }
