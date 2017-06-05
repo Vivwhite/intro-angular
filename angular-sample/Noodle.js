@@ -12,7 +12,7 @@ angular
     vm.noodles = [
       {'name': 'spaghetti', 'sauce': 'tomato sauce'},
       {'name': 'macaroni', 'sauce': 'cheese'},
-      {'name': 'udon', 'sauce': 'beef broth'}
+      {'name': 'ramen', 'sauce': 'miso broth'}
     ];
     vm.sayHi = function(){
       console.log(this);
